@@ -47,27 +47,5 @@ class EstadoRepository{
     return estado;
   }
 
-  /// Busca todos os registro do banco de dados convertido para
-  /// um objeto do tipo List<Estado>.   
-  Future<List<Estado>> findAll() async{
-    await databaseProvider.open();
-    Database dt = databaseProvider.database;
-    List<Map<String, Object?>> result = await dt.rawQuery("SELECT * FROM ESTADO");
-        
-    List<Estado> estadoResults = [];
-    
-    //Se retornou resultados
-    if (result.isNotEmpty){
-        for (int i = 0; i < result.length; i++){            
-            Map<String, Object?> item = result[i];
-            //Convertendo um Map para o objeto apropriado
-            Estado estado = Estado.fromMap(item);
-            estadoResults.add(estado);
-        }
-    }
-     
-    return estadoResults;
-  }  
-
 
 }

@@ -14,7 +14,7 @@ void main() async{
   estado.uf = "RJ";
   estado.ufibge = "32";
   
-  estadoRepository.insert(estado);
+  //estadoRepository.insert(estado);
   //estadoRepository.insert(estado);
   estado = await estadoRepository.findById(1);
   print(estado);
