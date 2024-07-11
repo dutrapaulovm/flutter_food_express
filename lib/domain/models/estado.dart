@@ -12,8 +12,7 @@ class Estado {
     this.ufibge,
     this.uf,
     this.nome,
-  });
-    
+  });   
   
 
   Estado copyWith({
@@ -32,19 +31,19 @@ class Estado {
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
-      'id': id,
-      'ufibge': ufibge,
-      'uf': uf,
-      'nome': nome,
+      'ID': id,
+      'UFIBGE': ufibge,
+      'UF': uf,
+      'NOME': nome,
     };
   }
 
   factory Estado.fromMap(Map<String, dynamic> map) {
     return Estado(
-      id: map['id'] != null ? map['id'] as int : null,
-      ufibge: map['ufibge'] != null ? map['ufibge'] as String : null,
-      uf: map['uf'] != null ? map['uf'] as String : null,
-      nome: map['nome'] != null ? map['nome'] as String : null,
+      id: map['ID'] != null ? map['ID'] as int : null,
+      ufibge: map['UFIBGE'] != null ? map['UFIBGE'] as String : null,
+      uf: map['UF'] != null ? map['UF'] as String : null,
+      nome: map['NOME'] != null ? map['NOME'] as String : null,
     );
   }
 
